@@ -341,28 +341,28 @@ button.correct-blink {
 
 /* Responsive */
 @media (max-width: 600px) {
-  /* allow the page to scroll on small screens */
+  /* allow natural scroll on small screens */
   html, body {
-    min-height: 100vh;
-    height: auto;       /* let page grow beyond viewport when needed */
-    overflow-y: auto;   /* enable vertical scrolling */
+    min-height: 100%;
+    height: auto;
+    overflow-y: auto;
   }
 
   .container {
-    padding: 10px;
-    height: auto; /* no longer force full viewport */
+    padding: 16px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* let content flow naturally */
-    gap: 8px;
+    justify-content: flex-start;
+    gap: 16px;
   }
 
   .card {
-    margin-bottom: 12px;
-    padding: 14px;
-    border-radius: 12px;
+    margin-bottom: 16px;
+    padding: 18px;
+    border-radius: 14px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.10);
-    max-height: none; /* allow cards to expand and push page to scroll */
+    max-height: none;
   }
 
   /* compact headings and text */
@@ -456,3 +456,4 @@ button.correct-blink {
     margin-bottom: 10px;
   }
 }
+
