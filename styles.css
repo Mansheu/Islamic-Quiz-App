@@ -341,28 +341,28 @@ button.correct-blink {
 
 /* Responsive */
 @media (max-width: 600px) {
-  /* make page fit viewport without scrolling */
+  /* allow the page to scroll on small screens */
   html, body {
-    height: 100vh;
     min-height: 100vh;
-    overflow: hidden; /* prevent page scroll */
+    height: auto;       /* let page grow beyond viewport when needed */
+    overflow-y: auto;   /* enable vertical scrolling */
   }
 
   .container {
     padding: 10px;
-    height: 100vh; /* occupy full viewport */
+    height: auto; /* no longer force full viewport */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* center content vertically */
+    justify-content: flex-start; /* let content flow naturally */
     gap: 8px;
   }
 
   .card {
-    margin-bottom: 0;
+    margin-bottom: 12px;
     padding: 14px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.10);
-    max-height: calc(100vh - 24px);
+    max-height: none; /* allow cards to expand and push page to scroll */
   }
 
   /* compact headings and text */
