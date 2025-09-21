@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Islamic Quiz App</title>
+  <meta name="description" content="A modern interactive Islamic Quiz App covering Quran, Prophets, Pillars, and more. Test your knowledge!">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Islamic Quiz App</h1>
+
+    <!-- 🔧 Setup Box -->
+    <div id="setup-box" class="card">
+      <label for="category">Choose Category:</label>
+      <select id="category">
+        <!-- Options will be populated by JS -->
+      </select>
+      <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <!-- 🧠 Quiz Box -->
+    <div id="quiz-box" class="hidden">
+      <div class="card">
+        <div id="question-count" class="question-count"></div>
+        <div id="question">Question text</div>
+        <div id="options"></div>
+
+        <!-- 🔹 Explanation placeholder -->
+        <div id="explanation" class="explanation"></div>
+
+        <div id="progress-container">
+          <div id="progress-bar"></div>
+        </div>
+
+        <div class="nav-buttons">
+          <button id="prev-btn" title="Go to previous question">Previous</button>
+          <button id="next-btn" class="hidden" title="Go to next question">Next</button>
+          <button id="restart-current-btn" title="Restart this quiz">Restart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🎯 Result Box -->
+    <div id="result-box" class="hidden">
+      <div class="card">
+        <h2>Your Score: <span id="score"></span></h2>
+        <h3>High Score: <span id="high-score"></span></h3>
+        <button id="restart-btn">Restart Quiz</button>
+      </div>
+    </div>
+
+    <!-- 🔘 Bottom Controls and Theme Toggle -->
+    <div id="bottom-controls" class="bottom-controls">
+      <button id="stop-btn" class="hidden">Quit</button>
+      <div class="theme-toggle">
+        <button id="themeToggleBtn" class="theme-btn" aria-label="Toggle theme">
+          <!-- Default icon: Moon -->
+          <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <span>Theme</span>
+      </div>
+    </div>
+
+    <footer class="footer">
+      Made with <span class="bubble-heart">💗</span> by <strong><a href="https://github.com/Mansheu" target="_blank" rel="noopener noreferrer">Mansheu</a></strong>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
